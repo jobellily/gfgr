@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	
+		
+		<script>
+			function createA(){
+				x=document.createElement("a");
+				y=document.createTextNode("汉有游女，不可求思。");
+				x.appendChild(y);
+				x.setAttribute("href","#");
+				Element=document.getElementById("div1");
+				Element.appendChild(x);
+				x.style.color="yellow";
+				x.style.backgroundColor="red";
+				x.style.textDecoration="none";
+			}
+			
+			function removeP(){
+				x=document.getElementById("2p");
+				x.parentNode.removeChild(x);
+            }
+			
+			function removeA(){
+				parent=document.getElementById("div3");
+				child=document.getElementById("3a");
+                parent.removeChild(child);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="border: 2px solid greenyellow;">
+			<p>南有乔木，不可休思。</p>
+		</div>
+		<button onclick="createA()">添加a元素</button>
+
+		
+		<div id="div2" style="border: 2px solid greenyellow;">
+			<h3>喜欢的诗句</h3>
+			<p id="2p">晚来天欲雨，能饮一杯无？</p>
+			<p id="2p">斯人若彩虹，遇上方知有。</p>
+            <p id="2p">陌上花开，可缓缓归矣。</p>
+            <button onclick="removeP()">删除p元素</button>
+		</div>
+		
+		
+		<div id="div3" style="border: 2px solid greenyellow;">
+			<h3>No.2 </h3>
+			<a href="#" id="3a">玲珑筛子安红豆</a>
+			<a href="#" id="3a">相思红豆</a>
+			<a href="#" id="3a">入骨相思君知否？</a>
+			<button onclick="removeA()">删除a元素</button>
+		</div>
+		
+		
+		<div id="div4" style="border: 2px solid greenyellow;">
+			<h3>No.3</h3>
+			<button onclick="document.body.style.backgroundColor='red'">背景色</button>
+	</body>
+</html>
+
